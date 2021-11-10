@@ -1,0 +1,88 @@
+.addProd {
+  width: 100%;
+  &-conatiner {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  &-items {
+    margin-block: 10px;
+    width: clamp(200px, 100%, 800px);
+
+    &_img {
+      width: clamp(200px, 100%, 600px);
+      margin-block: 10px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid rgba($oxford-blue, 0.5);
+      border-radius: 20px;
+      cursor: pointer;
+
+      label {
+        text-align: center;
+        p {
+          font-size: 10px;
+          color: rgba($oxford-blue, 0.5);
+        }
+        ion-icon {
+          font-size: 60px;
+          opacity: 0.5;
+        }
+      }
+      &:hover {
+        border: 2px solid rgba($oxford-blue, 1);
+        label ion-icon {
+          opacity: 1;
+        }
+      }
+      input {
+        opacity: 0;
+      }
+    }
+    &_inputs {
+      width: clamp(200px, 100%, 600px);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40px 40px 90px auto 40px 40px;
+      grid-gap: 10px;
+      input {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        background: none;
+        outline: none;
+        font-family: "Roboto", sans-serif;
+        &::placeholder {
+          font-family: "Roboto", sans-serif;
+        }
+      }
+      textarea {
+        border: none;
+        border-bottom: 1px solid rgba($oxford-blue, 0.8);
+        background: none;
+        outline: none;
+      }
+      &_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 40px 40px;
+        grid-gap: 10px;
+        input {
+          height: 40px;
+        }
+      }
+
+      button {
+        width: 100%;
+        border: none;
+        margin: 0 auto;
+        border-radius: 10px;
+        color: #fff;
+        outline: none;
+      }
+    }
+  }
+}

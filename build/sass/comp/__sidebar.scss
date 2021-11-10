@@ -1,0 +1,160 @@
+.sidebar {
+  width: 240px;
+  background-color: $oxford-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: clamp(100vh, 100%, auto);
+  box-shadow: 0 0px 20px $oxford-blue;
+  padding: 0px 10px;
+  z-index: 999;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+
+  &-logo {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0px;
+    img {
+      width: 140px;
+    }
+  }
+
+  &-nav {
+    margin: 20px auto;
+    width: 90%;
+
+    li {
+      list-style: none;
+      display: block;
+      padding: 10px 20px;
+      position: relative;
+      display: inline-block;
+      height: auto;
+      width: 100%;
+
+      ion-icon:nth-child(2) {
+        margin-left: auto;
+      }
+
+      a {
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        -webkit-transition: 0.2s linear;
+        -moz-transition: 0.2s linear;
+        -ms-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
+        transition: 0.2s linear;
+
+        ion-icon {
+          margin-right: 6px;
+        }
+      }
+
+      ul {
+        margin-top: 8px;
+        padding-block: 10px;
+        height: auto;
+        position: relative;
+        background-color: #f9f9f9;
+        z-index: 1;
+
+        li {
+          color: $oxford-blue;
+          list-style: none;
+          padding: 10px 10px;
+          min-width: 100px;
+          font-size: 14px;
+          width: 100%;
+          &:hover {
+            background-color: rgba($oxford-blue, 0.5);
+            color: #fff;
+          }
+        }
+      }
+    }
+    &_btn {
+      display: block;
+    }
+  }
+
+  &-mobRightSidebar {
+    display: block;
+    visibility: visible;
+    width: 200px;
+    background-color: $oxford-blue;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    bottom: 0px;
+    box-shadow: 0px 0px 10px $oxford-blue;
+    padding: 0px 10px;
+    z-index: 500;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #fff;
+    padding-right: 20px;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin-block: 6px;
+      font-size: 14px;
+    }
+
+    ion-icon {
+      font-size: 30px !important;
+      padding: 10px;
+      color: #fff;
+      width: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    &-mobRightSidebar {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  #sidebar {
+    position: fixed;
+    top: 60px;
+  }
+
+  .hide {
+    left: -300px !important;
+  }
+  .active {
+    left: 0px !important;
+  }
+
+  .hide-right {
+    right: -300px !important;
+  }
+  .activeRight {
+    right: 0px !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sidebar {
+    &-nav {
+      li {
+        a {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+}

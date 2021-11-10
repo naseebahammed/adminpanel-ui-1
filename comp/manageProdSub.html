@@ -1,0 +1,91 @@
+<div class="manageProd">
+  <div class="manageProd-card card">
+    <div class="manageProd-card_head">
+      <h3>Items Management</h3>
+    </div>
+    <div class="manageProd-card_tabs">
+      <div class="manageProd-card_tabs__header">
+        <button class="tabs-active" data-tab="tab-1">
+          <ion-icon name="layers-outline"></ion-icon> Bulk Upload
+        </button>
+        <button data-tab="tab-2">
+          <ion-icon name="add-circle-outline"></ion-icon> Add New Item
+        </button>
+      </div>
+    </div>
+    <div class="manageProd-card_tabs__body">
+      <div id="tab-1" class="tabs-body-active tab-content">
+        <h4>Download/Upload Excel Sheet</h4>
+        <div class="manageProd-card_tabs__items">
+          <label for="#down">Download Template</label>
+          <button>
+            <ion-icon name="download-outline"></ion-icon> Download
+          </button>
+        </div>
+        <div class="manageProd-card_tabs__items" onclick="addFile();">
+          <label>Upload Template</label>
+          <button>
+            <ion-icon name="document-outline"></ion-icon> Choose File
+          </button>
+          <input type="file" accept="image" id="addFile" />
+        </div>
+      </div>
+
+      <div id="tab-2" class="tab-content">
+        <h2>Add item</h2>
+        <h4>Basic Deatails</h4>
+        <div class="manageProd-card_tabs__items_two">
+          <div class="manageProd-card__inputs">
+            <label for="Itemnasme"> Item Name</label>
+            <input type="text" id="Itemnasme" placeholder="Enter Item Name" />
+          </div>
+          <div class="manageProd-card__inputs">
+            <label for="netQty">Net Quantity</label>
+            <input type="number" id="netQty" placeholder="Enter Item Name" />
+            <select name="unit" id=""></select>
+          </div>
+          <div class="manageProd-card__inputs">
+            <label for="desc">Description</label>
+
+            <textarea name="" id="" col="5" rows="4"></textarea>
+          </div>
+          <div class="manageProd-card__inputs">
+            <label for="cato">Categories</label>
+            <select name="cato" id="cato"></select>
+          </div>
+
+          <div class="manageProd-card__inputs">
+            <label for="itemCode">Item Code</label>
+            <input type="text" id="itemCode" placeholder="Enter Code" />
+          </div>
+          <div class="manageProd-card__inputs">
+            <label for="hsn">HSN/SAC</label>
+            <input type="text" id="hsn" placeholder="HSN/SAC" />
+          </div>
+          <div class="manageProd-card__inputs">
+            <label for="dist">Distributor</label>
+
+            <input type="text" id="dist" placeholder="Distributor" />
+          </div>
+          <div
+            class="manageProd-card__inputs manageProd-card__inputs__img"
+            onclick="addFile();"
+          >
+            <p>Upload Image</p>
+
+            <label for="image"
+              ><ion-icon name="image-outline"></ion-icon>
+              <p>Choose Your Images</p>
+            </label>
+            <input type="file" accept="image" id="addFile" />
+          </div>
+          <button class="manageProd-card__btn">
+            <ion-icon name="save-outline"></ion-icon> Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./manageInventory.html')
+</div>

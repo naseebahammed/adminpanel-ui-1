@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Starts-->
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naseeb</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!--Ion Icons-->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</head>
+
+  <body>
+    <!--Sidebar Start-->
+    <div class="sidebar hide" id="sidebar">
+  <div class="sidebar-logo">
+    <img src="img/logo-qsort.png" alt="logo" />
+  </div>
+
+  <ul class="sidebar-nav">
+    <li>
+      <a href="index.html"><ion-icon name="home-outline"></ion-icon> Home</a>
+    </li>
+    <li class="sidebar-nav_btn">
+      <a href="#">
+        <ion-icon name="list-outline"></ion-icon>
+        Products
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </a>
+      <ul class="sidebar-nav_btn_container">
+        <a href="manageProd.html"><li>Manage Products</li></a>
+        <a href="prodCato.html"><li>Product Catogories</li></a>
+      </ul>
+    </li>
+    <li class="sidebar-nav_btn">
+      <a href="#">
+        <ion-icon name="file-tray-outline"></ion-icon> Inventory
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </a>
+      <ul>
+        <a href="inventory.html"><li>Inventory</li></a>
+        <a href="addStocks.html"><li>Add Stocks</li></a>
+      </ul>
+    </li>
+
+    <li class="sidebar-nav_btn">
+      <a href="#"
+        ><ion-icon name="reader-outline"></ion-icon>
+        Invoice
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </a>
+      <ul>
+        <a href="invoice.html"><li>Invoice</li></a>
+        <li>Quick Invoice</li>
+      </ul>
+    </li>
+    <li class="sidebar-nav_btn">
+      <a href="#"
+        ><ion-icon name="stats-chart-outline"></ion-icon> Reports
+
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </a>
+      <ul>
+        <li>Sale Report</li>
+        <li>Sales Report (Quick Response)</li>
+        <li>Invoice History</li>
+        <li>Quick Invoice History</li>
+      </ul>
+    </li>
+    <li class="sidebar-nav_btn">
+      <a href=""> <ion-icon name="cash-outline"></ion-icon> Expense </a>
+    </li>
+    <li>
+      <a href=""><ion-icon name="repeat-outline"></ion-icon> Profit and Loss</a>
+    </li>
+    <li class="sidebar-nav_btn">
+      <a href="#"
+        ><ion-icon name="options-outline"></ion-icon> Settings
+        <ion-icon name="chevron-forward-outline"></ion-icon
+      ></a>
+      <ul>
+        <li>Units</li>
+        <li>Distributors</li>
+        <li>Tax</li>
+        <li>Discounts</li>
+      </ul>
+    </li>
+    <li class="sidebar-nav_btn">
+      <a href="#"
+        ><ion-icon name="storefront-outline"></ion-icon> Store Front
+        <ion-icon name="chevron-forward-outline"></ion-icon
+      ></a>
+      <ul>
+        <li>My Store URL</li>
+        <li>Whatsapp Ordering Number</li>
+        <li>Orders</li>
+        <li>Shop Items</li>
+        <li>Shop Banner</li>
+        <li>Coupons</li>
+        <li>Sales Report</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<ul class="sidebar-mobRightSidebar hide-right" id="mobRightSidebar">
+  <li>
+    <ion-icon name="cellular-outline"></ion-icon>
+    <p>Current Plan - Free</p>
+  </li>
+  <li>
+    <ion-icon name="stopwatch-outline"></ion-icon>
+    <p>
+      Expires On - <br />
+      21/12/2021
+    </p>
+  </li>
+  <li>
+    <ion-icon name="ticket-outline"></ion-icon>
+    <span>Recharge</span>
+  </li>
+  <li>
+    <ion-icon name="notifications-outline"></ion-icon>
+    <span>Notifications</span>
+  </li>
+  <li>
+    <ion-icon name="mail-outline"></ion-icon>
+    <span>Message</span>
+  </li>
+  <li>
+    <ion-icon name="settings-outline"></ion-icon>
+    <span>Settings</span>
+  </li>
+</ul>
+
+
+    <div class="main">
+      <nav class="navbar">
+  <button class="ham" id="navbar-sideBtn" onclick="sidebarFunc()">
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+  <ul class="navbar-items">
+    <li class="cont">
+      <ion-icon name="cellular-outline"></ion-icon>
+      <p>Free</p>
+      <span>Current Plan</span>
+    </li>
+    <li class="cont">
+      <ion-icon name="stopwatch-outline"></ion-icon>
+      <p>21/12/2021</p>
+      <span>Expires On</span>
+    </li>
+    <li>
+      <ion-icon name="ticket-outline"></ion-icon>
+      <span>Recharge</span>
+    </li>
+
+    <li>
+      <ion-icon name="notifications-outline"></ion-icon>
+      <span>Notifications</span>
+    </li>
+    <li>
+      <ion-icon name="mail-outline"></ion-icon>
+      <span>Message</span>
+    </li>
+    <li>
+      <a href="">
+        <img
+          src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=45"
+          alt=""
+        />
+      </a>
+
+      <span>Account</span>
+    </li>
+    <li>
+      <ion-icon name="settings-outline"></ion-icon>
+      <span>Settings</span>
+    </li>
+  </ul>
+
+  <div class="navbar-mobTheme">
+    <a href="" class="navbar-logo-img">
+      <img src="img/logo-qsort-dark.png" alt="" />
+    </a>
+
+    <button class="navbar-rightHam" id="navbar-rightHam" onclick="rightBarFunc()">
+      <ion-icon name="person-outline"></ion-icon>
+    </button>
+  </div>
+</nav>
+
+      <div class="main-elements"><div class="invoice">
+  <!-- <div class="card">
+    <h2>Invoice</h2>
+    <div class="invoice-data">
+      <h4>General Invoice</h4>
+      <p>Fill up the details for Generating Invoice</p>
+      <div class="invoice__inputs">
+        <input type="text" placeholder="Customer Name" />
+        <textarea placeholder="Customer Address"></textarea>
+        <input type="tel" placeholder="Customer Phone" />
+        <input type="text" placeholder="Search Product" />
+        <input type="number" placeholder="Quantity" />
+        <button class="invoice__btn">Generate Invoice</button>
+      </div>
+    </div>
+  </div> -->
+  <div class="card">
+    <div class="invoice-heading">
+      <h2>Invoice</h2>
+      <p>Please fill up the details to Generating Invoice</p>
+    </div>
+    <div class="invoice-header">
+      <div class="invoice-header__details"></div>
+    </div>
+  </div>
+</div>
+</div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "browser-sync": "^2.27.6",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.0.0",
+    "node-sass": "^6.0.1"
+  },
+  "name": "qstore-user",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "sass": "node-sass --watch assets/sass -o assets/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header Starts-->
+  @@include('./comp/header.html')
+  <body>
+    <!--Sidebar Start-->
+    @@include('./comp/sidebar.html')
+
+    <div class="main">
+      @@include('./comp/navbar.html')
+
+      <div class="main-elements">
+        <div class="d">@@include('./comp/addStocks.html')</div>
+
+        <div class="d">@@include('./comp/catogDesc.html')</div>
+        <div class="d">@@include('./comp/sizeColor.html')</div>
+      </div>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

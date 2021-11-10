@@ -1,0 +1,47 @@
+/* SCSS HEX */
+$oxford-blue: #06163aff;
+$alice-blue: #edf4f7ff;
+$medium-aquamarine: #40e2b0ff;
+$dark-orchid: #a227cfff;
+$purple-pizzazz: #fc62deff;
+$orange-pantone: #fc5d16ff;
+$carolina-blue: #1b9ffbff;
+$jonquil: #f4ca00ff;
+
+.btn {
+  &-green {
+    background-color: #4ecb71;
+    color: #fff;
+  }
+  &-add {
+    background: $carolina-blue;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-block: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+  }
+  &-warning {
+    background-color: #e7ab11;
+    color: #fff;
+  }
+}
+
+/* SCSS RGB */
+
+/*
+$oxford-blue: rgba(6, 22, 58, 1);
+$alice-blue: rgba(237, 244, 247, 1);
+$medium-aquamarine: rgba(64, 226, 176, 1);
+$dark-orchid: rgba(162, 39, 207, 1);
+$purple-pizzazz: rgba(252, 98, 222, 1);
+$orange-pantone: rgba(252, 93, 22, 1);
+$carolina-blue: rgba(27, 159, 251, 1);
+$jonquil: rgba(244, 202, 0, 1);
+
+*/

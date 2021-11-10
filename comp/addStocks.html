@@ -1,0 +1,43 @@
+<div class="addProd" id="addProd">
+  <div class="addProd-conatiner">
+    <h2>Add Product</h2>
+    <div class="addProd-items">
+      <form action="">
+        <div class="addProd-items_img" onclick="addFile();">
+          <label for="image"
+            ><ion-icon name="image-outline"></ion-icon>
+            <p>Choose Your Images</p>
+          </label>
+          <input type="file" accept="image" id="addFile" />
+        </div>
+
+        <div class="addProd-items_inputs">
+          <input type="text" placeholder="Product Name *" required />
+          <input
+            type="text"
+            id="addProd-cato"
+            placeholder="Product Category *"
+            required
+          />
+          <div class="addProd-items_inputs_grid">
+            <input type="text" placeholder="Price *" required />
+            <input type="text" placeholder="Sale Price *" required />
+            <input type="text" placeholder="Product Unit *" required />
+            <input type="text" placeholder="Weight *" required />
+          </div>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="4"
+            placeholder="Product Description"
+          ></textarea>
+
+          <div id="addColorSize" class="btn-add">Add Color Size</div>
+
+          <button class="btn-green" type="submit">Add Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

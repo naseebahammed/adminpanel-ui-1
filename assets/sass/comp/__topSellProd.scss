@@ -1,0 +1,44 @@
+.tsp {
+  margin-top: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  &-heading {
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: 700;
+      font-size: 24px;
+      margin-right: 14px;
+    }
+    span {
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 14px;
+    }
+  }
+  &-table {
+    margin-top: 20px;
+
+    table {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid #e4e4e4;
+      overflow: hidden;
+
+      tr {
+        text-align: center;
+
+        &:first-child {
+          background-color: #e4e4e4;
+          border-top-right-radius: 20px;
+        }
+        td,
+        th {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

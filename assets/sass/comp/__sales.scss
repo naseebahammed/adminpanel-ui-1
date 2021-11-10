@@ -1,0 +1,171 @@
+.sales {
+  width: 100%;
+  border-radius: 20px;
+  &-items {
+    display: flex;
+  }
+  .final {
+    width: 100%;
+  }
+  &-card {
+    margin: 00px 20px 0px 0px;
+    width: clamp(80px, 220px, 280px);
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+
+    &_span {
+      color: rgba(0, 0, 0, 0.6);
+      margin: 4px 0px;
+    }
+
+    &_value {
+      font-size: clamp(6px, 30px, 30px);
+      font-weight: 900;
+      width: 100%;
+    }
+    &_percent {
+      margin-top: 10px;
+      display: flex;
+      align-items: flex-start;
+
+      ion-icon {
+        margin-right: 6px;
+        font-size: 14px;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+      }
+      .up {
+        background-color: #4ecb71;
+      }
+      .down {
+        background-color: #f60a0a;
+      }
+    }
+
+    &_analytics {
+      ion-icon {
+        font-size: 40px;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .sales {
+    width: 90%;
+
+    &-card {
+      margin: 0px 10px 0px 0px;
+      width: clamp(80px, 200px, 280px) !important;
+      padding: 14px;
+
+      &_value {
+        font-size: clamp(6px, 26px, 30px);
+      }
+    }
+  }
+}
+@media screen and (max-width: 920px) {
+  .sales {
+    width: 100%;
+    &-card {
+      width: 220px !important;
+      padding: 10px 20px;
+
+      &_value {
+        font-size: clamp(6px, 26px, 30px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sales-card {
+    width: 140px !important;
+
+    &_analytics {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sales-card {
+    width: 160px !important;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .sales {
+    &-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 10px;
+    }
+
+    &-card {
+      width: 300px !important;
+
+      &:last-child {
+        display: none;
+      }
+
+      &_analytics {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sales {
+    &-card {
+      width: 260px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sales {
+    &-card {
+      width: 220px !important;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .sales {
+    &-card {
+      width: 200px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .sales {
+    &-items {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-card {
+      width: 200px !important;
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+
+      &_analytics {
+        display: block;
+      }
+    }
+  }
+}

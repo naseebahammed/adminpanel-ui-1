@@ -1,0 +1,17 @@
+.main {
+  width: calc(100vw - 260px);
+  height: calc(100vh - 60px);
+  margin-left: auto;
+  margin-top: 60px;
+  padding: 20px;
+
+  &-elements {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    width: 100vw;
+  }
+}

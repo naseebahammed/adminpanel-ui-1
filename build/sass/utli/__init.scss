@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: #f3f3f3;
+}
+input {
+  outline: none;
+}
+button {
+  outline: none;
+  border: none;
+}
+.card {
+  margin: 0px 20px 0px 0px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}

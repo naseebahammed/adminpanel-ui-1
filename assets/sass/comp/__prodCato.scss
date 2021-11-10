@@ -1,0 +1,52 @@
+.prodCato {
+  &-card {
+    margin-bottom: 20px;
+    &_head {
+      margin-block: 10px;
+    }
+    &_items {
+      margin-block: 10px;
+    }
+    &_input {
+      display: flex;
+      align-items: center;
+      margin-block: 10px;
+
+      input {
+        height: 40px;
+        width: 200px;
+        padding: 0 4px;
+        margin-right: 10px;
+      }
+      button {
+        height: 40px;
+        width: 120px;
+        background-color: $oxford-blue;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 4px;
+      }
+    }
+    &_table {
+      width: 100%;
+      border-radius: 6px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      tr td {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        padding-block: 10px;
+        padding-left: 10px;
+
+        &:last-child {
+          text-align: center;
+        }
+
+        a {
+          ion-icon {
+            color: $oxford-blue;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
