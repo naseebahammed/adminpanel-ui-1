@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naseeb</title>
+  <title>QSort.store</title>
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!--Ion Icons-->
   <script
@@ -87,10 +87,10 @@
         <ion-icon name="chevron-forward-outline"></ion-icon
       ></a>
       <ul>
-        <li>Units</li>
-        <li>Distributors</li>
-        <li>Tax</li>
-        <li>Discounts</li>
+        <a href="units.html"><li>Units</li></a>
+        <a href="distributors.html"><li>Distributors</li></a>
+        <a href="tax.html"><li>Tax</li></a>
+        <a href="discounts.html"><li>Discounts</li></a>
       </ul>
     </li>
     <li class="sidebar-nav_btn">
@@ -99,13 +99,10 @@
         <ion-icon name="chevron-forward-outline"></ion-icon
       ></a>
       <ul>
-        <li>My Store URL</li>
-        <li>Whatsapp Ordering Number</li>
-        <li>Orders</li>
-        <li>Shop Items</li>
-        <li>Shop Banner</li>
-        <li>Coupons</li>
-        <li>Sales Report</li>
+        <a href="store.html"><li>Store Details</li></a>
+        <a href="orders.html"><li>Orders</li></a>
+        <a href="shopItems.html"><li>Shop Items</li></a>
+        <a href="coupons.html"><li>Coupons</li></a>
       </ul>
     </li>
   </ul>
@@ -202,13 +199,18 @@
   <div class="manageProd-card_head">
     <h3>Manage Items</h3>
   </div>
-  <div class="manageProd-card_btnBlock">
-    <button>Copy</button>
-    <button>CSV</button>
-    <button>PDF</button>
-    <button>Print</button>
+  <div class="btn btn-col">
+    <div class="btn-block">
+      <button>Copy</button>
+      <button>CSV</button>
+      <button>PDF</button>
+      <button>Print</button>
+    </div>
+    <div class="btn-block__search">
+      <input type="text" placeholder="Search" />
+    </div>
   </div>
-  <div class="manageProd-card_table">
+  <div class="manageProd-card_table table">
     <table>
       <tr>
         <th>Item Name</th>

@@ -31,11 +31,179 @@
     border-radius: 4px;
   }
   */
-  &_heading {
+  &__heading {
     margin-bottom: 10px;
-  }
-  &-header {
     display: flex;
     justify-content: space-between;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000;
+      color: #fff;
+      padding: 4px 20px;
+      font-size: 16px;
+      ion-icon {
+        font-size: 20px;
+        margin-right: 4px;
+      }
+    }
+  }
+  &__data {
+    width: 100%;
+    height: clamp(50%, 100%, 50vh);
+    background-color: #eee;
+    padding: 20px;
+  }
+  &__header {
+    background-color: $inv-black;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 200px;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    ul {
+      margin-top: 4px;
+      li {
+        list-style: none;
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+    }
+    &-customer {
+      p {
+        font-size: 14px;
+      }
+      h1 {
+        padding-block: 4px;
+      }
+    }
+  }
+  &__items {
+    width: 100%;
+    margin-block: 20px;
+    counter-reset: serial-number;
+
+    tr td {
+      &:first-child {
+        padding: 10px;
+        &:before {
+          counter-increment: serial-number;
+          content: counter(serial-number);
+        }
+      }
+      &:not(:nth-child(2)) input {
+        width: 100px;
+      }
+    }
+
+    tbody tr td {
+      input {
+        width: 90%;
+        background: none;
+        border: none;
+        border-bottom: 2px solid rgba($inv-black, 0.2);
+      }
+    }
+
+    tr th,
+    tr td {
+      border: 1px solid rgba($inv-black, 0.2);
+    }
+    tr th {
+      background-color: $inv-black;
+      color: #fff;
+      padding-block: 10px;
+    }
+    tr td {
+      padding-block: 10px;
+      text-align: center;
+
+      &:nth-child(2) {
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+    &-addBtn {
+      width: 100%;
+      background-color: #24a0ed;
+      padding: 10px 0px;
+      color: #fff;
+      font-size: 14px;
+    }
+    #rowDelete {
+      ion-icon {
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+  &__final {
+    &-amount {
+      margin-top: 20px;
+      display: grid;
+      grid-template-rows: 30px 30px 2px 40px 2px 50px;
+      justify-content: flex-end;
+      grid-gap: 10px;
+    }
+
+    &-item {
+      display: grid;
+      grid-template-columns: 160px 200px;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        background: none;
+        border: none;
+        border-bottom: 2px solid rgba($inv-black, 0.2);
+      }
+    }
+  }
+  &__footer {
+    margin-top: 20px;
+    height: 40px;
+    background-color: $inv-black;
   }
 }
+// &__discount {
+//   margin-bottom: 10px;
+//   width: 300px;
+
+//   tr td {
+//     font-weight: bold;
+//     &:last-child {
+//       text-align: center;
+//     }
+//   }
+
+//   input {
+//     background: none;
+//     border: none;
+//     border-bottom: 1px solid rgba($inv-black, 0.2);
+//     width: 100%;
+//   }
+// }
+
+// &__total {
+//   width: 300px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-evenly;
+// }

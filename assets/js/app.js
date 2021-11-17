@@ -1,3 +1,7 @@
+document.write(
+  '<script type="text/javascript" src="js/jquery-ui.min.js" ></script>'
+);
+
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 
 if (mediaQuery.matches) {
@@ -79,3 +83,30 @@ $(document).ready(function () {
     $("#" + tab_id).addClass("tabs-body-active");
   });
 });
+
+$(function () {
+  $("#datepicker").datepicker({
+    dateFormat: "dd-mm-yy",
+    duration: "fast",
+  });
+  $("#datepiccker").datepicker({
+    dateFormat: "dd-mm-yy",
+    duration: "fast",
+  });
+});
+
+$("#popDetails").hide();
+
+$("#popBtn").click(function () {
+  $("#popDetails").slideToggle(600);
+});
+
+function deleteRow(r) {
+  $("#rowDelete").closest("tr").remove();
+}
+
+function tableRowAdd() {
+  $("#invoice-table tbody").append(
+    '<tr><td></td><td><input type="text"id="itemName"name="itemName"placeholder="Item Name"/></td><td><input type="number" id="gst" name="gst" placeholder="GST" /><span>%</span></td><td><input type="number" id="qty" name="qty" placeholder="Quanity" /></td><td><span>&#8377;</span><input type="number" id="rate" name="rate" placeholder="Rate" /></td><td><span>&#8377;</span><input type="number"id="amount"name="amount" placeholder="Amount" /> </td> <td> <button id="rowDelete" onclick="deleteRow();"> <ion-icon name="close-outline"></ion-icon></button></td></tr>'
+  );
+}

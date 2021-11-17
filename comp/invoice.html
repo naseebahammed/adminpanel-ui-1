@@ -15,12 +15,113 @@
     </div>
   </div> -->
   <div class="card">
-    <div class="invoice-heading">
-      <h2>Invoice</h2>
-      <p>Please fill up the details to Generating Invoice</p>
+    <div class="invoice__heading">
+      <div>
+        <h2>Invoice</h2>
+        <p>Please fill up the details to Generating Invoice</p>
+      </div>
+
+      <button><ion-icon name="print-outline"></ion-icon> Print</button>
     </div>
-    <div class="invoice-header">
-      <div class="invoice-header__details"></div>
+    <div class="invoice__data">
+      <div class="invoice__header">
+        <img src="img/logo-qsort.png" alt="logo" />
+        <p>Invoice</p>
+      </div>
+      <div class="invoice__details">
+        <div class="invoice__details-customer">
+          <p>Invoice To</p>
+          <h1>John Doe</h1>
+          <ul>
+            <li>ABC Company</li>
+            <li>Phone: +91 9876543210</li>
+            <li>Email : johndoe@abc.com</li>
+          </ul>
+        </div>
+        <ul class="invoice__details-data">
+          <li>Invoice Number : #12345</li>
+          <li>Invoice Date : 1/1/21</li>
+          <li>Contact Number : +91 9876543210</li>
+          <li>Email Id : sales@abc.com</li>
+        </ul>
+      </div>
+      <table class="invoice__items" id="invoice-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>GST Rate</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <input
+                type="text"
+                id="itemName"
+                name="itemName"
+                placeholder="Item Name"
+              />
+            </td>
+            <td>
+              <input type="number" id="gst" name="gst" placeholder="GST" />
+              <span>%</span>
+            </td>
+            <td>
+              <input type="number" id="qty" name="qty" placeholder="Quanity" />
+            </td>
+            <td>
+              <span>&#8377;</span>
+              <input type="number" id="rate" name="rate" placeholder="Rate" />
+            </td>
+            <td>
+              <span>&#8377;</span>
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                placeholder="Amount"
+              />
+            </td>
+            <td>
+              <button id="rowDelete" onclick="deleteRow();">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="invoice__items-addBtn" onclick="tableRowAdd();">
+        Add New Item
+      </button>
+
+      <div class="invoice__final-amount">
+        <div class="invoice__final-item">
+          <p><ion-icon name="calculator-outline"></ion-icon> Sub Total</p>
+          <p>$110</p>
+        </div>
+        <div class="invoice__final-item">
+          <p><ion-icon name="pricetag-outline"></ion-icon> Discount</p>
+          <input type="number" placeholder="Enter Discount Rate" />
+        </div>
+        <hr style="background-color: #ccc" />
+        <div class="invoice__final-item line">
+          <p><b>Total (INR) :</b></p>
+          <h1>$ 110</h1>
+        </div>
+        <hr style="background-color: #ccc" />
+        <div class="invoice__final-words">
+          <p>Toatal in (Words)</p>
+          <h2>One Hundred Only</h2>
+        </div>
+      </div>
+      <div class="invoice__footer"></div>
     </div>
   </div>
 </div>

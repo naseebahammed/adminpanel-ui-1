@@ -1,0 +1,15 @@
+.table {
+  margin-block: 20px;
+  table {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+
+    tr td,
+    tr th {
+      text-align: center;
+      padding: 4px;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+}

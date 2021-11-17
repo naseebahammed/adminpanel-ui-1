@@ -1,0 +1,40 @@
+.units {
+  &__elem {
+    margin-top: 40px;
+  }
+  &__btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__box {
+    margin-bottom: 10px;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
+  &__inputs {
+    div {
+      margin-bottom: 10px;
+      display: grid;
+      grid-template-columns: clamp(100px, 140px, 160px) clamp(20%, 60%, 60%);
+      align-items: center;
+
+      input,
+      select {
+        height: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        &:active,
+        &:focus {
+          border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+      }
+      select {
+        width: 20%;
+      }
+    }
+  }
+}

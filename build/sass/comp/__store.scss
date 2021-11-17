@@ -1,0 +1,115 @@
+.store {
+  &__head {
+    p {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    margin-block: 10px;
+  }
+  &__details {
+    margin-block: 10px;
+  }
+  &__data {
+    display: grid;
+    grid-template-columns: 240px 200px;
+    margin-block: 8px;
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: underline;
+      }
+
+      &:first-child {
+        font-weight: bold;
+      }
+      &:last-child {
+        &::before {
+          content: ":";
+          padding-right: 4px;
+        }
+      }
+    }
+  }
+  h3 {
+    margin-top: 10px;
+    text-decoration: underline;
+  }
+  &__links {
+    margin-top: 10px;
+
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        margin-right: 4px;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          background-color: $oxford-blue;
+
+          ion-icon {
+            color: #fff;
+          }
+        }
+        ion-icon {
+          font-size: 30px;
+          color: $oxford-blue;
+        }
+      }
+    }
+  }
+  &__banner {
+    &-img {
+      position: relative;
+      background-color: rgba(0, 0, 0, 1);
+
+      &:hover img {
+        opacity: 0.5;
+      }
+      img {
+        width: clamp(200px, 100%, 100vw);
+        height: clamp(100px, 50%, 100px);
+        transition: 0.5s ease;
+        backface-visibility: hidden;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+
+      .overlay {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        z-index: 999;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+        }
+
+        p {
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 10px;
+          border-radius: 4px;
+          font-size: clamp(14px, 16px, 18px);
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    &__data {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

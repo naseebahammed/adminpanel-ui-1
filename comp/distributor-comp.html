@@ -1,0 +1,77 @@
+<div class="units card">
+  <div class="units__elem">
+    <div class="units__btn">
+      <h2>Distributors Management</h2>
+      <button class="btn__dark" id="popBtn" onclick="popup();">
+        Add New &nbsp; <ion-icon name="add-circle-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="units__box" id="popDetails">
+      <h4>Manage Distributors</h4>
+      <div class="units__inputs">
+        <div>
+          <label for="cname">Company Name</label>
+          <input type="text" id="uName" placeholder="Enter Distributor Name" />
+        </div>
+        <div>
+          <label for="desc">Address</label>
+          <input
+            type="text"
+            id="desc"
+            placeholder="Enter Distributors Address"
+          />
+        </div>
+        <div>
+          <label for="phone1">Phone 1</label>
+          <input type="text" placeholder="Enter Phone 1" />
+        </div>
+        <div>
+          <label for="phone2">Phone 2</label>
+          <input type="text" placeholder="Enter Phone 2" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter Email" />
+        </div>
+        <div>
+          <label for="websities">Website</label>
+          <input type="text" placeholder="Enter Website" />
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <input type="text" placeholder="Enter Notes1" />
+        </div>
+        <div>
+          <button class="btn__dark">Add Unit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="units__elem">
+    <div class="btn btn-col">
+      <div class="btn-block">
+        <button>Copy</button>
+        <button>CSV</button>
+        <button>PDF</button>
+        <button>Print</button>
+      </div>
+      <div class="btn-block__search">
+        <input type="text" placeholder="Search" />
+      </div>
+    </div>
+    <div class="coupon__table table">
+      <table>
+        <tr>
+          <th>Company Name</th>
+          <th>Address</th>
+          <th>Phone 1</th>
+          <th>Phone 2</th>
+          <th>Email</th>
+          <th>Website</th>
+          <th>Notes</th>
+          <th>Edit/Delete</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
