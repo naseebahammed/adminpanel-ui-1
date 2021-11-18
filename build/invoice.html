@@ -59,7 +59,7 @@
       </a>
       <ul>
         <a href="invoice.html"><li>Invoice</li></a>
-        <li>Quick Invoice</li>
+        <a href="quickInvoice.html"><li>Quick Invoice</li></a>
       </ul>
     </li>
     <li class="sidebar-nav_btn">
@@ -220,7 +220,120 @@
 
       <button><ion-icon name="print-outline"></ion-icon> Print</button>
     </div>
+    <hr />
+
     <div class="invoice__data">
+      <div class="invoice__header">
+        <img src="img/logo-qsort-dark.png" class="invoice__logo" alt="logo" />
+        <div class="invoice__header-data">
+          <p class="invoice__header-heading">INVOICE</p>
+          <div class="invoice__header--date" id="date"></div>
+          <div class="invoice__header--billNo">#INV123</div>
+        </div>
+      </div>
+      <div class="invoice__details">
+        <div class="invoice__details--elem">
+          <span>From</span>
+          <input type="text" id="sellerName" name="sellerName" placeholder="Seller/Company Name" >
+          <input type="text" id="sellerBuilding" name="sellerBuilding" placeholder="Building No/House Name">
+          <input type="text" id="sellerLoc" name="sellerLoc" placeholder="Location, City, Dist, State">
+          <input type="text" id="sellerCnt" name="sellerCnt" placeholder="Contact Number">
+        </div>
+        <div class="invoice__details--elem">
+          <span>To</span>
+          <input type="text" id="buyerName" name="buyerName" placeholder="Buyer/Company Name" >
+          <input type="text" id="buyerBuilding" name="buyerBuilding" placeholder="Building No/House Name">
+          <input type="text" id="buyerLoc" name="buyerLoc" placeholder="Location, City, Dist, State">
+          <input type="text" id="buyerCnt" name="buyerCnt" placeholder="Contact Number">
+        </div>
+      </div>
+      <table class="invoice__table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>GST %</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <input
+                type="text"
+                id="itemName"
+                name="itemName"
+                placeholder="Item Name"
+              />
+            </td>
+            <td>
+              <input type="number" id="gst" name="gst" placeholder="GST" />
+              <span>%</span>
+            </td>
+            <td>
+              <input type="number" id="qty" name="qty" placeholder="Quanity" />
+            </td>
+            <td>
+              <span>&#8377;</span>
+              <input type="number" id="rate" name="rate" placeholder="Rate" />
+            </td>
+            <td>
+              <span>&#8377;</span>
+              <input
+                type="number"
+                id="amount"
+                name="amount"
+                placeholder="Amount"
+              />
+            </td>
+            <td>
+              <button id="rowDelete" onclick="deleteRow();">
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="invoice__table--addBtn" onclick="tableRowAdd();">
+        Add New Item
+      </button>
+      <div class="invoice__end">
+        <div class="invoice__notes">
+          <h4>Notes</h4>
+          <textarea rows="4" >It was a wonderful doing business with You
+            </textarea>
+          </p>
+        </div>
+        <div class="invoice__finalBill">
+          <div class="invoice__finalBill--elem">
+            <p>Sub Total :</p>
+            <p>0.00</p>
+          </div>
+          <div class="invoice__finalBill--elem">
+            <p>Discount</p>
+            <p>
+              <input
+                type="text"
+                id="discount"
+                name="discount"
+                placeholder="0.00"
+              />
+            </p>
+          </div>
+          <div class="invoice__finalBill--elem">
+            <p>Total</p>
+            <p id="finalAmount">$928 .80</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="invoice__data">
       <div class="invoice__header">
         <img src="img/logo-qsort.png" alt="logo" />
         <p>Invoice</p>
@@ -266,9 +379,8 @@
               />
             </td>
             <td>
-              <input type="number" id="gst" name="gst" placeholder="GST" /><span
-                >%</span
-              >
+              <input type="number" id="gst" name="gst" placeholder="GST" />
+              <span>%</span>
             </td>
             <td>
               <input type="number" id="qty" name="qty" placeholder="Quanity" />
@@ -294,6 +406,7 @@
           </tr>
         </tbody>
       </table>
+
       <button class="invoice__items-addBtn" onclick="tableRowAdd();">
         Add New Item
       </button>
@@ -301,7 +414,7 @@
       <div class="invoice__final-amount">
         <div class="invoice__final-item">
           <p><ion-icon name="calculator-outline"></ion-icon> Sub Total</p>
-          <p>$110</p>
+          <p></p>
         </div>
         <div class="invoice__final-item">
           <p><ion-icon name="pricetag-outline"></ion-icon> Discount</p>
@@ -310,22 +423,24 @@
         <hr style="background-color: #ccc" />
         <div class="invoice__final-item line">
           <p><b>Total (INR) :</b></p>
-          <h1>$ 110</h1>
+          <h1 id="invoiceFinalAmount"></h1>
         </div>
         <hr style="background-color: #ccc" />
         <div class="invoice__final-words">
           <p>Toatal in (Words)</p>
-          <h2>One Hundred Only</h2>
+          <h2 id="invoiceFinalAmountWords"></h2>
         </div>
       </div>
       <div class="invoice__footer"></div>
-    </div>
+    </div> -->
   </div>
 </div>
 </div>
     </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/app.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/app.js"></script>
+
   </body>
 </html>

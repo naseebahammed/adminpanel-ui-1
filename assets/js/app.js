@@ -106,7 +106,70 @@ function deleteRow(r) {
 }
 
 function tableRowAdd() {
-  $("#invoice-table tbody").append(
+  $(".invoice__table tbody").append(
     '<tr><td></td><td><input type="text"id="itemName"name="itemName"placeholder="Item Name"/></td><td><input type="number" id="gst" name="gst" placeholder="GST" /><span>%</span></td><td><input type="number" id="qty" name="qty" placeholder="Quanity" /></td><td><span>&#8377;</span><input type="number" id="rate" name="rate" placeholder="Rate" /></td><td><span>&#8377;</span><input type="number"id="amount"name="amount" placeholder="Amount" /> </td> <td> <button id="rowDelete" onclick="deleteRow();"> <ion-icon name="close-outline"></ion-icon></button></td></tr>'
   );
 }
+
+$("#gst").keyup(function () {
+  var gst = $("#gst").val();
+
+  $("#invoiceFinalAmount").html(gst);
+});
+
+$("#invoiceFinalAmount").html("100");
+/*
+$("#invoiceFinalAmountWords").html(
+  numberToWords.toWords($("#invoiceFinalAmount").value)
+);*/
+
+$("#date").html(function () {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = today.getMonth() + 1;
+  //var mm = String(today.getMonth() + 1).padStart(2, "0");
+  var yyyy = today.getFullYear();
+  var month;
+  switch (mm) {
+    case 1:
+      month = "Jan";
+      break;
+    case 2:
+      month = "Feb";
+      break;
+    case 3:
+      month = "Mar";
+      break;
+    case 4:
+      month = "Apr";
+      break;
+    case 5:
+      month = "May";
+      break;
+    case 6:
+      month = "Jun";
+      break;
+    case 7:
+      month = "Jul";
+      break;
+    case 8:
+      month = "Aug";
+      break;
+    case 9:
+      month = "Sep";
+      break;
+    case 10:
+      month = "Oct";
+      break;
+    case 11:
+      month = "Nov";
+      break;
+    case 12:
+      month = "Dec";
+      break;
+  }
+  today = dd + "-" + month + "-" + yyyy;
+  $("#date").html(today);
+});
+
+$("")

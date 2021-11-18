@@ -1,0 +1,31 @@
+<div class="quickInvoice card">
+  <h2>Quick Invoice</h2>
+  <p>Fill below to Generate Quick Invoice</p>
+
+  <div class="quickInvoice__elem">
+    <form action="">
+      <div class="quickInvoice__data">
+        <h3>Customer Details</h3>
+        <div class="quickInvoice__inputs">
+          <input type="text" id="custName" placeholder="Customer Name" />
+          <input type="text" id="custAddress" placeholder="Customer Address" />
+          <input type="text" id="custPhone" placeholder="Customer Phone" />
+        </div>
+        <div class="quickInvoice__inputs-data">
+          <input type="text" id="itemName" placeholder="Item Name" />
+          <input type="number" id="qty" placeholder="Qunantity" />
+          <input type="number" id="price" placeholder="Price" />
+          <input type="number" id="tax" placeholder="Tax" />
+          <input type="number" id="discount" placeholder="Discount" />
+          <button>
+            <ion-icon name="add-outline"></ion-icon> &nbsp; Add New Row
+          </button>
+
+          <button class="submit" type="submit">
+            Save & Print &nbsp;<ion-icon name="print-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
